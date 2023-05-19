@@ -3,12 +3,12 @@ const bodyParser = require("body-parser");
 const path = require('path');
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
-const User = require("../model/auth");
-const Image = require("../model/image");
+const User = require("./model/auth");
+const Image = require("./model/image");
 const multer = require("multer");
-const verifiytoken = require("../middleware/verifyToken");
+const verifiytoken = require("./middleware/verifyToken");
 const bcrypt = require("bcrypt");
-const verifytoken = require("../middleware/verifyToken");
+const verifytoken = require("./middleware/verifyToken");
 const cors = require("cors");
 require("dotenv").config();
 
