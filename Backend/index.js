@@ -213,10 +213,11 @@ app.get("/images/:userId/:imageName",verifytoken, async(req, res) => {
 });
 
 const PORT = process.env.PORT || 6001;
+app.listen(PORT, () => console.log(`server running on port ${PORT}`));
 mongoose
   .connect(process.env.DB)
   .then(() => {
-    app.listen(PORT, () => console.log(`server running on port ${PORT}`));
+    console.log("Mongoose server connected.")
   })
   .catch((error) => {
     console.log(`${error} did not connect`);
