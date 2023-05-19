@@ -95,6 +95,10 @@ app.post("/login", async (req, res) => {
   }
 });
 
+app.get("/",(req,res)=>{
+  res.send("Working")
+})
+
 //Image routes
 
 app.use("/profile", express.static('upload/images'));
